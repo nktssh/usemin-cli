@@ -41,8 +41,8 @@ usemin src/index.html -d dist -o dist/index.html --htmlmin true -c config.js
 
 ### Example HTML
 ```html
-<!-- build:css css/main.js -->
-<link rel="stylesheet" href="css/main.css">
+<!-- build:css css/main.css -->
+<link rel="stylesheet" href="css/app.css">
 <link rel="stylesheet" href="css/modules.css">
 <!-- endbuild -->
 
@@ -52,15 +52,15 @@ usemin src/index.html -d dist -o dist/index.html --htmlmin true -c config.js
 <!-- endbuild -->
 
 <!-- build:js js/main.js -->
-<script defer async src="js/app.js"></script>
-<script defer async src="js/controllers.js"></script>
+<script defer async src="js/another-app.js"></script>
+<script defer async src="js/another-controllers.js"></script>
 <!-- endbuild -->
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 ```
 Running the command with `--rmlr true` will output:
 ```
-<link rel="stylesheet" href="css/main.js">
+<link rel="stylesheet" href="css/main.css">
 <script src="js/main.js"></script>
 <script defer async src="js/main.js"></script>
 ```
